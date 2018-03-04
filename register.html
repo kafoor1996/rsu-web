@@ -13,6 +13,7 @@
     <link href="css/prettyPhoto.css" rel="stylesheet">      
 	<link href="css/main.css" rel="stylesheet">
 	 <link href="css/responsive.css" rel="stylesheet">
+      
 	 <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
@@ -22,24 +23,21 @@
   <body class="homepage">   
 	<header data-include="header" id="header">
         
+        
 		
     </header><!--/header-->
 		
-	<div class="map">
-		<iframe src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Kuningan,+Jakarta+Capital+Region,+Indonesia&amp;aq=3&amp;oq=kuningan+&amp;sll=37.0625,-95.677068&amp;sspn=37.410045,86.572266&amp;ie=UTF8&amp;hq=&amp;hnear=Kuningan&amp;t=m&amp;z=14&amp;ll=-6.238824,106.830177&amp;output=embed">
-		</iframe>
-	</div>
 	
-	<section id="contact-page">
+	<section id="register-page">
         <div class="container">
             <div class="center">        
-                <h2>Drop Your Message</h2>
-                <p class="lead">Thank you for contacting us. Please provide the following information to help us serve you better</p>
+                <h2>Registration</h2>
+                <p class="lead">Thank you for choosing rsu solution. Please provide the following information to help us serve you better</p>
             </div> 
             <div class="row contact-wrap"> 
                 <div class="status alert alert-success" style="display: none"></div>
                 <form id="main-contact-form" class="contact-form" name="contact-form" method="post" action="sendemail.php">
-                    <div class="col-sm-5 col-sm-offset-1">
+                    <div class="col-sm-10 col-sm-offset-1">
                         <div class="form-group">
                             <label>Name *</label>
                             <input type="text" name="name" class="form-control" required="required">
@@ -49,22 +47,23 @@
                             <input type="email" name="email" class="form-control" required="required">
                         </div>
                         <div class="form-group">
-                            <label>Phone</label>
+                            <label>Phone *</label>
                             <input type="number" class="form-control">
                         </div>
                         <div class="form-group">
-                            <label>Subject *</label>
-                            <input type="text" name="subject" class="form-control" required="required">
+                            <label for="category">Category *</label>
+                            <select class="form-control" id="category" required="required">
+                                <option>Software</option>
+                                <option>Mobile App</option>
+                                <option>Hardware</option>
+                            </select>
                         </div>                     
-                    </div>
-                    <div class="col-sm-5">
-                        
                         <div class="form-group">
                             <label>Message *</label>
                             <textarea name="message" id="message" required="required" class="form-control" rows="12"></textarea>
                         </div>                        
                         <div class="form-group">
-                            <button type="submit" name="submit" class="btn btn-primary btn-lg" required="required">Submit Message</button>
+                        <button type="submit" name="submit" class="btn btn-primary btn-lg" required="required"  onclick="btnEmailSend()">Book</button>
                         </div>
                     </div>
                 </form> 
@@ -83,6 +82,13 @@
 	<footer id="footer" class="midnight-blue" data-include="footer">
          
     </footer><!--/#footer-->
+     <script>
+function btnEmailSend() {
+   var Reqdata="<Root> <ToID>asukkoorj@gmail.com</ToID><Subject> ForgotPassword- TransactionNotes   </Subject><Message> Your  Password is 5643  </Message> <Remarks>  ForgotPassword  </Remarks></Root>"
+    EmailSend(Reqdata);
+    
+}
+</script>
 	
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="js/jquery.js"></script>
@@ -91,5 +97,8 @@
     <script src="js/jquery.isotope.min.js"></script>   
     <script src="js/wow.min.js"></script>
 	<script src="js/main.js"></script>
+      <script src="js/email.js"></script>
+      <script src="js/Script.js"></script>
+   
   </body>
 </html>

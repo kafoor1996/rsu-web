@@ -185,7 +185,7 @@ body > section {
 *******Header******
 **************************/
 .navbar-fixed-top .navbar-toggle .icon-bar {
-  background-color: #fff;
+  background-color: #f9b01d;
 }
 
 .navbar>.container .navbar-brand{
@@ -242,9 +242,11 @@ ul.social-share li a:hover {
 .navbar {
   border-radius: 0;
   margin-bottom: 0;
-  background: #151515;
-  padding: 15px 0;
+  /*background: #151515;*/
+  background: #000 url(../images/header-banner.png);
+  padding: 0px 0;
   padding-bottom: 0;
+  border-bottom: 1px solid;
 }
 
  .navbar-nav{
@@ -260,9 +262,10 @@ ul.social-share li a:hover {
   padding: 5px 12px;
   margin: 0;
   border-radius: 3px;
-  color: #fff;
+  color: black;
   line-height: 24px;
   display: inline-block;
+  font-weight: bold;
 }
 
 .navbar-fixed-top .navbar-nav > li > a:hover{
@@ -271,7 +274,7 @@ ul.social-share li a:hover {
 }
 
 .navbar-fixed-top {
-  border: none;
+  /*border: none;*/
 }
 
 .navbar-fixed-top .navbar-brand {
@@ -1772,6 +1775,17 @@ ul.sidebar-gallery {
   display: inline-block;
 }
 
+.reg-banner{
+  background: #000 url(../images/services/bg_services.jpg);
+  width: 100%;
+  height: 200px;
+  position:relative;
+  margin-top:90px;
+  margin-bottom:40px;
+}
+#register-page{
+  padding: 85px 0;
+}
 /***********************
 ********* Footer ******
 ************************/
